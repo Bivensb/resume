@@ -159,7 +159,35 @@ footer {
 @media (max-width: 640px) {
   .resume-header {
     flex-direction: column;
+    align-items: center;
+    gap: 16px;
     text-align: center;
+  }
+
+  .resume-photo {
+    width: 88px;
+    height: 88px;
+  }
+
+  .header-content {
+    align-items: center;
+  }
+
+  .header-meta {
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.85rem;
+  }
+
+  .header-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .header-actions a {
+    font-size: 0.8rem;
+    padding: 6px 10px;
   }
 }
 
@@ -188,6 +216,71 @@ footer {
   border-radius: 999px;
   padding: 6px 14px;
   font-size: 0.9rem;
+}
+/* ---------- Print Styles ---------- */
+@media print {
+  body {
+    background: white;
+    color: #000;
+    font-size: 11pt;
+  }
+
+  .resume-wrapper {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    page-break-inside: avoid;
+  }
+
+  .resume-header {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    text-align: left;
+  }
+
+  .resume-photo {
+    width: 72px;
+    height: 72px;
+  }
+
+  .header-actions,
+  footer {
+    display: none !important;
+  }
+
+  .section-title {
+    border-bottom: 1px solid #000;
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+  }
+
+  .job-meta {
+    color: #000;
+    font-weight: 500;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .skills-list {
+    gap: 6px;
+  }
+
+  .skill {
+    border: 1px solid #000;
+    background: none;
+    font-size: 10pt;
+  }
 }
 
 
@@ -224,7 +317,7 @@ footer {
 </div>
 <div class="card">
   <h2 class="section-title">Summary</h2>
-            <p>I am a Digital Marketing Manager with over 10 years of experience leading high-performing teams and driving customer-centric marketing strategies. My expertise lies in building and executing cross-channel lead nurturing programs spanning Email, Website, and SMS that strengthen brand relationships and deliver measurable results.
+            <p>I am a Digital Marketing Manager with over 10 years of experience leading high-performing teams and driving customer-centric marketing strategies. My expertise lies in building and executing cross-channel lead nurturing programs spanning Email, Website, and SMS that strengthen brand relationships and deliver measurable results.</p>
             <p>I prioritize creating an environment where teams can thrive. I believe that when people feel supported, valued, and empowered, they deliver their best work and that directly translates into exceptional customer experiences. I focus on developing clear processes, fostering collaboration, and encouraging continuous learning so my team stays ahead of industry trends.</p>
             <p>A core part of my approach is customer experience mapping. By identifying key touchpoints and communication opportunities, my team and I design personalized, meaningful interactions that both improve customer satisfaction and increase conversion rates. Ultimately, I am passionate about uniting data-driven insights with human-centered leadership to build lasting value for both the business and its customers.</p>            
         </div>
@@ -339,6 +432,7 @@ footer {
 </footer>
 </body>
 </html>
+
 
 
 
